@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto';
+    background-color: #4072EE;
+}
+.flex {
+    display: flex;
+}
+.container {
+    height: 100vh;
+    position: relative;
+    margin: 0 auto;
+}
+.background-image {
+    max-width: 1290px;
+    position: absolute;
+    height: 600px;
+    bottom: 0;
+    left: 0;
+    object-fit: contain;
+}
+.signup-wrapper {
+    background-color: #FFFFFF;
+    box-shadow: 0px 10px 40px 0;
+    width: 500px;
+    min-height: 600px;
+    position: absolute;
+    right: 91px;
+    top: 50px;
+}
+.signup-top {
+    padding-top: 50px;
+}
+.signup-item {
+    max-width: 75%;
+    margin: 0 auto;
+}
+.signup-item h1 {
+    font-size: 40px;
+    color: #31394D;
+}
+.signup-item p {
+    font-size: 16px;
+    color: #748AA1;
+}
+.form-wrapper {
+    margin: 0 auto;
+    box-shadow: 0px 1px 20px #E5E9F2;
+    border-radius: 5px;
+    margin-top: 30px;
+    min-height: 350px;
+}
+.form-item {
+    padding-top: 25px;
+}
+input {
+    display: block;
+}
+label {
+    font-size: 12px;
+    color: #748AA1;
+}
+.input-wrapper {
+    margin: 0 auto;
+    width: 80%;
+}
+input, select {
+    margin-top: 6px;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #EBEDF4;
+}
+input::placeholder {
+    padding-left: 17px;
+    color: #31394D;
+    font-size: 14px;
+}
+.input-middle {
+    margin-top: 30px;
+    position: relative;
+}
+.change {
+    position: absolute;
+    right: 20px;
+    top: 37px;
+    color: #748AA1;
+    font-size: 14px;
+}
+.input-wrapper-bottom {
+    width: 30%;
+}
+.button-wrapper {
+    width: 100%;
+    justify-content: center;
+}
+.signup-button {
+    margin-top: 30px;
+    background-color: #29CB97;
+    color: #FFFFFF;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 80%;
+}
+.social-signup {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 43px;
+}
+.social-signup button:first-child {
+    background-color: #255B9B;
+    border: none;
+    box-shadow: 0px 10px 40px #D6DCEA;
+    border-radius: 5px;
+    padding: 12px 12px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.social-signup button:last-child {
+    background-color: #00ADEE;
+    border: none;
+    box-shadow: 0px 10px 40px #D6DCEA;
+    border-radius: 5px;
+    padding: 12px 12px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: none;
+}
+.signup-wrapper-black {
+    background-color: #1F2327;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+}
+.signup-wrapper-black .form-wrapper {
+    background-color: #292E33;
+}
+.signup-wrapper-black h1 {
+    color: #FFFFFF;
+}
+.signup-wrapper-black input::placeholder {
+    color: #FFFFFF;
+}
+.form-wrapper {
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+}
+.signup-wrapper-black input, .signup-wrapper-black select {
+    background-color: #292E33;
+    border: 1px solid #33393F;
+}
+.signup-wrapper-black .social-signup button {
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+}
+.signup-wrapper-black select {
+    color: #FFFFFF;
+}
+.bottom-inputs {
+    margin-top: 10px;
+}
+.signup-wrapper-black .invalid-email {
+    color: red;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.valid-email {
+    color: green;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+}
+@media (max-width: 1024px) {
+    .signup-wrapper {
+        position: relative;
+        margin: 0 auto;
+        width: 90%;
+        right: 0;
+        top: 0;
+        margin-top: 40px;
+    }
+    .background-image {
+        display: none;
+    }
+    .signup-top {
+        padding-top: 20px;
+    }
+    .signup-top h1 {
+        font-size: 26px;
+    }
+    .social-signup button:first-child,
+    .social-signup button:last-child {
+        font-size: 10px;
+    }
+}

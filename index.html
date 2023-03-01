@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SignUp</title>
+</head>
+<body>
+    <div class="container">
+        <img src="Illustration.png" class="background-image" alt="Mask">
+        <div class="signup-wrapper" id="signupWrapper">
+            <div class="signup-item">
+                <div class="signup-top">
+                    <h1>
+                        Signup
+                    </h1>
+                    <p>
+                        There is no charge upon registration!
+                    </p>
+                </div>
+                <div class="form-wrapper">
+                    <div class="form-item">
+                        <form action="" id="signupForm">
+                            <div class="input-wrapper">
+                                <label for="email">Email Adress</label>
+                                <input type="email" id="email" name="email">
+                            </div>
+                            <div class="input-wrapper input-middle">
+                                <label for="email">Country</label>
+                                <select name="Country" id="">
+                                    <option value="Italy">Georgia</option>
+                                    <option value="Georgia">Monaco</option>
+                                    <option value="Georgia">France</option>
+                                    <option value="Georgia">Italy</option>
+                                    <option value="Georgia">United States</option>
+                                </select>
+                                <span class="change">
+                                    Change
+                                </span>
+                            </div>
+                            <div class="bottom-inputs flex">
+                                <div class="input-wrapper input-wrapper-bottom">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" name="email" name="city">
+                                </div>
+                                <div class="input-wrapper input-wrapper-bottom">
+                                    <label for="zip">Zip Code</label>
+                                    <input type="number"  name="zip">
+                                </div>
+                            </div>
+                            <div class="button-wrapper flex">
+                                <button type="submit" class="signup-button">
+                                    Signup now
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="social-signup flex">
+                    <button>
+                        Signup with Facebook
+                    </button>
+                    <button>
+                        Signup with Facebook
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const signupForm = document.getElementById('signupForm')
+        const signupWrapper = document.getElementById('signupWrapper')
+        const invalidMail = document.createElement('h4')
+        signupForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            const cityFormat = /^[a-zA-z] ?([a-zA-z]|[a-zA-z] )*[a-zA-z]$/;
+            let email = document.getElementById('email');
+            let city = document.getElementById('city')
+
+            if(email.value.match(mailFormat) && city.value.match(cityFormat)) {
+                  signupWrapper.classList.remove('signup-wrapper-black')
+                invalidMail.classList.add('valid-email')
+                invalidMail.textContent = "Successfully Sent"
+                signupForm.appendChild(invalidMail)
+            }
+            else {
+                signupWrapper.classList.add('signup-wrapper-black')
+                invalidMail.classList.add('invalid-email')
+                invalidMail.textContent = "Try Again"
+                signupForm.appendChild(invalidMail)
+                console.log(city.value)
+            }
+        })
+    </script>
+</body>
+</html>
