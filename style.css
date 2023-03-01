@@ -109,12 +109,12 @@ input::placeholder {
     height: 40px;
     width: 80%;
 }
-.social-signup {
+.people-signup {
     width: 100%;
     justify-content: space-between;
     margin-top: 43px;
 }
-.social-signup button:first-child {
+.people-signup button:first-child {
     background-color: #255B9B;
     border: none;
     box-shadow: 0px 10px 40px #D6DCEA;
@@ -123,7 +123,7 @@ input::placeholder {
     font-size: 14px;
     color: #FFFFFF;
 }
-.social-signup button:last-child {
+.people-signup button:last-child {
     background-color: #00ADEE;
     border: none;
     box-shadow: 0px 10px 40px #D6DCEA;
