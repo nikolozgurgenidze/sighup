@@ -95,7 +95,7 @@ input::placeholder {
 .input-wrapper-bottom {
     width: 30%;
 }
-.button-wrapper {
+.clicker-wrapper {
     width: 100%;
     justify-content: center;
 }
@@ -163,7 +163,7 @@ input::-webkit-inner-spin-button {
 .signup-wrapper-black select {
     color: #FFFFFF;
 }
-.bottom-inputs {
+.down-inputs {
     margin-top: 10px;
 }
 .signup-wrapper-black .invalid-email {
